@@ -1,0 +1,224 @@
+JFDML JFormDesigner: "7.0.5.4.420" Java: "11.0.14.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 0
+			} ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "用户管理"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 20 )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "panel3"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+					"axis": 0
+				} ) {
+					name: "panel4"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btnAdd"
+						"text": "新增"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnAdd", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btnDel"
+						"text": "删除"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnDel", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btnEdt"
+						"text": "修改"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnEdt", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btnQue"
+						"text": "查询"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnQue", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btnReset"
+						"text": "重置"
+						"visible": false
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnReset", true ) )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+						name: "panel5"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+							"axis": 0
+						} ) {
+							name: "panel6"
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "btnSetService"
+								"text": "服务对象"
+								"visible": false
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnSetService", true ) )
+							} )
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "East"
+						} )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "North"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane1"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "table1"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "ID" )
+							add( "账号" )
+							add( "密码" )
+							add( "姓名" )
+							add( "性别" )
+							add( "年龄" )
+							add( "联系电话" )
+							add( "权限" )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "table1MousePressed", true ) )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+					"axis": 0
+				} ) {
+					name: "panel8"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btnRefresh"
+						"text": "清空"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnRefresh", true ) )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "South"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 3
+				"rows": 4
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "账号"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "txtUsername"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "密码"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "txtPassword"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label4"
+					"text": "姓名"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "txtName"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label5"
+					"text": "性别"
+					"horizontalAlignment": 0
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) ) {
+					name: "panel7"
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "radioButtonMale"
+						"text": "男"
+						"$buttonGroup": new FormReference( "buttonGroup1" )
+						"horizontalAlignment": 0
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "radioButtonFemale"
+						"text": "女"
+						"$buttonGroup": new FormReference( "buttonGroup1" )
+						"horizontalAlignment": 0
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label6"
+					"text": "出生日期"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "txtBirth"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label7"
+					"text": "联系电话"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "txtPhone"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label8"
+					"text": "权限"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "comboBoxPermission"
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "              "
+						addElement( "              " )
+						addElement( "生活管家" )
+						addElement( "后勤管理" )
+					}
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 800, 600 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "buttonGroup1"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 616 )
+		} )
+	}
+}

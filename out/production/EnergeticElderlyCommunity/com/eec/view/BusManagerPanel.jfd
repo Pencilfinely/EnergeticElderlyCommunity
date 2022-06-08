@@ -1,0 +1,293 @@
+JFDML JFormDesigner: "7.0.5.4.420" Java: "11.0.14.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 0
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "班车路线管理"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 20 )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "panel2"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+					"columns": 4
+					"rows": 4
+				} ) {
+					name: "panel3"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "线路代码"
+						"horizontalAlignment": 0
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "txtBusCode"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "线路名称"
+						"horizontalAlignment": 0
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "txtName"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "线路类型"
+						"horizontalAlignment": 0
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+						"columns": 2
+					} ) {
+						name: "panel4"
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "radioButtonInner"
+							"text": "岛内班车"
+							"horizontalAlignment": 0
+							"$buttonGroup": new FormReference( "buttonGroup1" )
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "radioButtonOuter"
+							"text": "岛外班车"
+							"horizontalAlignment": 0
+							"$buttonGroup": new FormReference( "buttonGroup1" )
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label5"
+						"text": "线路方向"
+						"horizontalAlignment": 0
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+						"columns": 2
+					} ) {
+						name: "panel5"
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "radioButtonUp"
+							"text": "上行"
+							"horizontalAlignment": 0
+							"$buttonGroup": new FormReference( "buttonGroup2" )
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "radioButtonDown"
+							"text": "下行"
+							"horizontalAlignment": 0
+							"$buttonGroup": new FormReference( "buttonGroup2" )
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label6"
+						"text": "运营日期"
+						"horizontalAlignment": 0
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBoxDate"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: " "
+							addElement( " " )
+							addElement( "星期一" )
+							addElement( "星期二" )
+							addElement( "星期三" )
+							addElement( "星期四" )
+							addElement( "星期五" )
+							addElement( "星期六" )
+							addElement( "星期日" )
+							addElement( "每天" )
+						}
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label7"
+						"text": "运营时段"
+						"horizontalAlignment": 0
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBoxPeriod"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: " "
+							addElement( " " )
+							addElement( "凌晨" )
+							addElement( "早上" )
+							addElement( "上午" )
+							addElement( "中午" )
+							addElement( "下午" )
+							addElement( "傍晚" )
+							addElement( "晚上" )
+						}
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label8"
+						"text": "发车时间"
+						"horizontalAlignment": 0
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "txtTime"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "South"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "panel6"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+						"axis": 0
+					} ) {
+						name: "panel9"
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "btnAdd"
+							"text": "新增"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnAdd", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "btnDel"
+							"text": "删除"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnDel", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "btnEdt"
+							"text": "修改"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnEdt", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "btnQue"
+							"text": "查询"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnQue", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "btnReset"
+							"text": "重置"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnReset", true ) )
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "West"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+						"axis": 0
+					} ) {
+						name: "panel10"
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "btnEndBookingTime"
+							"text": "截止时间"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnEndBookingTime", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "btnBook"
+							"text": "登记"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnBook", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "btnPassenger"
+							"text": "查看乘客"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnPassenger", true ) )
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "East"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "North"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "panel7"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+						"axis": 0
+					} ) {
+						name: "panel8"
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "btnRefresh"
+							"text": "清空"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnRefresh", true ) )
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "South"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						add( new FormComponent( "javax.swing.JTable" ) {
+							name: "table1"
+							"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+							}, new java.util.Vector {
+								add( "ID" )
+								add( "线路代码" )
+								add( "线路名称" )
+								add( "方向" )
+								add( "运营日期" )
+								add( "运营时段" )
+								add( "发车日期" )
+								add( "截止时间" )
+								add( "预约人数" )
+							}, new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							}, new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							}, new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "table1MousePressed", true ) )
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 640, 480 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "buttonGroup1"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 496 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "buttonGroup2"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 557 )
+		} )
+	}
+}
