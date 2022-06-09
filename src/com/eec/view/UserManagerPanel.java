@@ -363,7 +363,7 @@ public class UserManagerPanel extends JPanel {
                     index = 0;
                 }else if(user.getPermission().equals("生活管家")){
                     index = 1;
-                }else if(user.getPermission().equals("后期管理")){
+                }else if(user.getPermission().equals("后勤管理")){
                     index = 2;
                 }
                 this.comboBoxPermission.setSelectedIndex(index);

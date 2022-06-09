@@ -163,6 +163,7 @@ new FormModel {
 						add( new FormComponent( "javax.swing.JButton" ) {
 							name: "btnReset"
 							"text": "重置"
+							"visible": false
 							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnReset", true ) )
 						} )
 					}, new FormLayoutConstraints( class java.lang.String ) {

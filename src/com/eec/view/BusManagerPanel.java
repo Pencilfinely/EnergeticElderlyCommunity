@@ -830,6 +830,7 @@ public class BusManagerPanel extends JPanel {
 
                     //---- btnReset ----
                     btnReset.setText("\u91cd\u7f6e");
+                    btnReset.setVisible(false);
                     btnReset.addActionListener(e -> btnReset(e));
                     panel9.add(btnReset);
                 }

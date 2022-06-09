@@ -57,6 +57,9 @@ public class BookDialog extends JDialog {
             busList = busDao.getAll();
 
             for (Member m : list) {
+                if(m.getIC().equals("")){
+                    continue;
+                }
                 if(m.getName().equals(this.txtName.getText()) && m.getIC().equals(this.txtIC.getText())){
                     m.setBusCode(this.bus.getBusCode());
                     fnd = true;
@@ -69,6 +72,9 @@ public class BookDialog extends JDialog {
                     if(b.getBusCode().equals(this.bus.getBusCode())){
                         int cnt = 0;
                         for (Member m : list) {
+                            if(m.getIC().equals("")){
+                                continue;
+                            }
                             if(m.getBusCode().equals(this.bus.getBusCode())){
                                 cnt++;
                             }
