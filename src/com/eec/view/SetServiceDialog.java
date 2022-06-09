@@ -273,7 +273,7 @@ public class SetServiceDialog extends JDialog {
                     panel1.add(scrollPane1, BorderLayout.CENTER);
 
                     //---- label3 ----
-                    label3.setText("\u751f\u6d3b\u7ba1\u5bb6");
+                    label3.setText("\u751f\u6d3b\u7ba1\u5bb6\u6240\u8f96\u4f1a\u5458");
                     label3.setHorizontalAlignment(SwingConstants.CENTER);
                     label3.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 14));
                     panel1.add(label3, BorderLayout.NORTH);
@@ -285,7 +285,7 @@ public class SetServiceDialog extends JDialog {
                     panel2.setLayout(new BorderLayout());
 
                     //---- label2 ----
-                    label2.setText("\u4f1a\u5458");
+                    label2.setText("\u672a\u5206\u914d\u4f1a\u5458");
                     label2.setHorizontalAlignment(SwingConstants.CENTER);
                     label2.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 14));
                     panel2.add(label2, BorderLayout.NORTH);

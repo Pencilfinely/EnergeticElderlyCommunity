@@ -82,13 +82,13 @@ public class MainView extends JFrame{
         if(name.equals("会员管理") && (modeSetter == 0)){
             splitPane1.setRightComponent(MembershipManagerPanel.getInstance());
         }else if(name.equals("房间管理") && (modeSetter == 0)) {
-            splitPane1.setRightComponent(RoomManagerPanel.getInstance());
+            //splitPane1.setRightComponent(RoomManagerPanel.getInstance());
         }else if(name.equals("用户管理") && (modeSetter == 0)) {
             splitPane1.setRightComponent(UserManagerPanel.getInstance());
         }else if(name.equals("入住管理") && (modeSetter == 0)){
-            splitPane1.setRightComponent(CheckInManagerPanel.getInstance());
+            //splitPane1.setRightComponent(CheckInManagerPanel.getInstance());
         }else if(name.equals("场馆设施管理") && (modeSetter == 0)){
-            splitPane1.setRightComponent(FacilityManagerPanel.getInstance());
+            //splitPane1.setRightComponent(FacilityManagerPanel.getInstance());
         }else if(name.equals("班车路线管理") && (modeSetter == 0 || modeSetter == 2)){
             splitPane1.setRightComponent(BusManagerPanel.getInstance());
         }else if(name.equals("生活管家") && (modeSetter == 0 || modeSetter == 1)){

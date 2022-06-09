@@ -4,6 +4,7 @@ import java.awt.color.ICC_ColorSpace;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class Member {
     private int id;
@@ -18,6 +19,9 @@ public class Member {
     private String contactPhone;
     private String livingManagerUsername;
     private String livingManagerPassword;
+
+    private User livingManager;
+    private List<Bus> busList;
 
     private String busCode;
 

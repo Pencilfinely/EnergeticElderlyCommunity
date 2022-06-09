@@ -143,10 +143,13 @@ public class UserManagerPanel extends JPanel {
         if(n == JOptionPane.YES_OPTION){
 
             UserDao userDao = UserDaoImpl.getInstance();
+            MemberDao memberDao = MemberDaoImpl.getInstance();
             List<User> list = null;
+            List<Member> memberList = null;
 
             try {
                 list = userDao.getAll();
+                memberList = memberDao.getAll();
             } catch (IOException ex) {
                 JOptionPane.showMessageDialog(this,"文件同步失败！");
                 throw new RuntimeException(ex);
@@ -155,9 +158,16 @@ public class UserManagerPanel extends JPanel {
             for (User user : list) {
                 if(user.getUsername().equals(this.table1.getValueAt(row,1)) &&
                         user.getPassword().equals(this.table1.getValueAt(row,2))){
+                    for (Member m : memberList) {
+                        if(m.getLivingManagerUsername().equals(user.getUsername()) && m.getLivingManagerPassword().equals(user.getPassword())){
+                            m.setLivingManagerUsername("");
+                            m.setLivingManagerPassword("");
+                        }
+                    }
 
                     try {
                         userDao.delete(user);
+                        memberDao.setAll(memberList);
                         JOptionPane.showMessageDialog(this,"删除成功！");
                     } catch (IOException ex) {
                         JOptionPane.showMessageDialog(this,"删除失败！");

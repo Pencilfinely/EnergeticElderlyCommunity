@@ -99,6 +99,10 @@ public class LivingManagerPanel extends JPanel {
 
     private void btnEdt(ActionEvent e) {
         int row = this.table1.getSelectedRow();
+        if(row == -1){
+            JOptionPane.showMessageDialog(this,"未选中对象！");
+            return;
+        }
 
         MemberDao memberDao = MemberDaoImpl.getInstance();
         List<Member> list = null;
@@ -112,6 +116,9 @@ public class LivingManagerPanel extends JPanel {
 
         Member m = null;
         for (Member member : list){
+            if(member.getIC().equals("")){
+                continue;
+            }
             if(member.getIC().equals((String) this.table1.getValueAt(row,5))){
                 EditMemberDialog.getInstance(member,user);
                 m = member;
@@ -119,8 +126,13 @@ public class LivingManagerPanel extends JPanel {
             }
         }
 
-        EditMemberDialog.getInstance(m,user).setSize(600,400);
-        EditMemberDialog.getInstance(m,user).setVisible(true);
+        if(m != null){
+            EditMemberDialog.getInstance(m,user).setSize(600,400);
+            EditMemberDialog.getInstance(m,user).setVisible(true);
+        }else {
+            JOptionPane.showMessageDialog(this,"无所辖会员！");
+        }
+
 
     }
 
