@@ -15,7 +15,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-
+/*
+ *工具类，用于json文件读写
+ */
 public class Tools{
     //path:json文件路径，class1：集合内元素类型
     //泛型方法：在修饰符和返回值之间添加泛型（<T>）

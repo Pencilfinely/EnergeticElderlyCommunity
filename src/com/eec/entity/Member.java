@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-public class Member {
+public class Member extends Person {
     private int id;
     private String name;
     private String birth;
