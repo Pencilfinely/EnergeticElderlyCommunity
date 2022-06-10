@@ -29,10 +29,12 @@ public class MemberDaoImpl implements MemberDao {
     @Override
     public int add(String name, String birth, String gender, String phone, String IC,
                    String adress, String type, String contact, String contactPhone, String livingManagerUsername,
-                   String livingManagerPassword, String busCode) throws IOException {
+                   String livingManagerPassword) throws IOException {
         List<Member> list = Tools.getJsonToList(filePath, Member.class);
         int newId = list.get(list.size() - 1).getId() + 1;
-        list.add(new Member(newId,name,birth,gender,phone,IC,adress,type,contact,contactPhone,livingManagerUsername,livingManagerPassword,busCode));
+        List<String> buses = new ArrayList<String>();
+        buses.add("");
+        list.add(new Member(newId,name,birth,gender,phone,IC,adress,type,contact,contactPhone,livingManagerUsername,livingManagerPassword,buses));
 
         Tools.writeListToJSON(filePath,list);
         return 1;
@@ -73,7 +75,9 @@ public class MemberDaoImpl implements MemberDao {
     @Override
     public List<Member> getAll() throws IOException {
         File file = new File(filePath);
-        Member member = new Member(0,"","","","","","","","","","","","");
+        List<String> buses = new ArrayList<String>();
+        buses.add("");
+        Member member = new Member(0,"","","","","","","","","","","",buses);
         if(!file.exists()){
             file.createNewFile();
             List<Member> list = new ArrayList<>();

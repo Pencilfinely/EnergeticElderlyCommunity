@@ -21,16 +21,24 @@ public class Member extends Person {
     private String livingManagerPassword;
 
     private User livingManager;
-    private List<Bus> busList;
+    private List<String> busList;
 
-    private String busCode;
+//    private String busCode;
 
-    public String getBusCode() {
-        return busCode;
+//    public String getBusCode() {
+//        return busCode;
+//    }
+//
+//    public void setBusCode(String busCode) {
+//        this.busCode = busCode;
+//    }
+
+    public void addBus(String busCode){
+        this.busList.add(busCode);
     }
 
-    public void setBusCode(String busCode) {
-        this.busCode = busCode;
+    public List<String> getBusList(){
+        return this.busList;
     }
 
     public String getLivingManagerUsername() {
@@ -131,7 +139,7 @@ public class Member extends Person {
 
     public Member(int id, String name, String birth, String gender, String phone, String IC,
                   String adress, String type, String contact, String contactPhone, String livingManagerUsername,
-                  String livingManagerPassword, String busCode) {
+                  String livingManagerPassword, List<String> busList) {
         this.id = id;
         this.name = name;
         this.birth = birth;
@@ -144,7 +152,8 @@ public class Member extends Person {
         this.contactPhone = contactPhone;
         this.livingManagerUsername = livingManagerUsername;
         this.livingManagerPassword = livingManagerPassword;
-        this.busCode = busCode;
+//        this.busCode = busCode;
+        this.busList = busList;
     }
 
     public Member() {

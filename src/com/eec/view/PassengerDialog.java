@@ -54,14 +54,22 @@ public class PassengerDialog extends JDialog {
                 if(member.getId() == 0 && member.getIC().equals("")){
                     continue;
                 }
-                if(member.getBusCode().equals(this.bus.getBusCode())){
-                    Vector vector = new Vector();
-                    vector.add(member.getId());
-                    vector.add(member.getName());
-                    vector.add(member.getIC());
+                List<String> busList = member.getBusList();
+                int i = 0;
+                for(String s : busList){
+                    if (s.equals(bus.getBusCode())){
+                        if(s.equals(this.bus.getBusCode())){
+                            Vector vector = new Vector();
+                            vector.add(member.getId());
+                            vector.add(member.getName());
+                            vector.add(member.getIC());
 
-                    data.add(vector);
+                            data.add(vector);
+                        }
+                    }
+                    i++;
                 }
+
             }
 
 

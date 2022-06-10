@@ -61,7 +61,21 @@ public class BookDialog extends JDialog {
                     continue;
                 }
                 if(m.getName().equals(this.txtName.getText()) && m.getIC().equals(this.txtIC.getText())){
-                    m.setBusCode(this.bus.getBusCode());
+//                    m.setBusCode(this.bus.getBusCode());
+                    List<String> buses = m.getBusList();
+                    boolean has = false;
+                    for (String s : buses) {
+                        if(s.equals(this.bus.getBusCode())){
+                            has = true;
+                        }
+                    }
+                    if(!has){
+                        m.addBus(this.bus.getBusCode());
+                    }else {
+                        JOptionPane.showMessageDialog(this,"此会员已预约该班车！");
+                        return;
+                    }
+
                     fnd = true;
                     break;
                 }
@@ -75,8 +89,16 @@ public class BookDialog extends JDialog {
                             if(m.getIC().equals("")){
                                 continue;
                             }
-                            if(m.getBusCode().equals(this.bus.getBusCode())){
-                                cnt++;
+//                            if(m.getBusCode().equals(this.bus.getBusCode())){
+//                                cnt++;
+//                            }
+                            List<String> buses = m.getBusList();
+                            int i = 0;
+                            for(String s : buses){
+                                if (s.equals(this.bus.getBusCode())){
+                                    cnt++;
+                                }
+                                i++;
                             }
                         }
                         b.setBookingCnt(cnt);

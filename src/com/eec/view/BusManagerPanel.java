@@ -296,9 +296,15 @@ public class BusManagerPanel extends JPanel {
                         bus.getBusCode().equals(this.table1.getValueAt(row,1))){
 
                     for (Member member : memberList) {
-                        if (member.getBusCode().equals(bus.getBusCode())){
-                            member.setBusCode("");
+                        List<String> busList = member.getBusList();
+                        int i = 0;
+                        for(String s : busList){
+                            if (s.equals(bus.getBusCode())){
+                                member.getBusList().set(i,"");
+                            }
+                            i++;
                         }
+
                     }
 
                     try {
@@ -413,8 +419,16 @@ public class BusManagerPanel extends JPanel {
                     bus.setTime(this.txtTime.getText());
 
                     for (Member member : memberList) {
-                        if(member.getBusCode().equals(bus.getBusCode())){
-                            member.setBusCode(bus.getBusCode());
+//                        if(member.getBusCode().equals(bus.getBusCode())){
+//                            member.setBusCode(bus.getBusCode());
+//                        }
+                        List<String> busList = member.getBusList();
+                        int i = 0;
+                        for(String s : busList){
+                            if (s.equals(bus.getBusCode())){
+                                member.getBusList().set(i,bus.getBusCode());
+                            }
+                            i++;
                         }
                     }
                     try {

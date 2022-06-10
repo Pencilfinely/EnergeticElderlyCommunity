@@ -105,7 +105,7 @@ public class MembershipManagerPanel extends JPanel {
             }
             memberDao.add(this.txtName.getText(),this.txtBirthDate.getText(),gender,
                     this.txtPhoneNum.getText(),this.txtIC.getText(),this.txtAddress.getText(),
-                    this.txtType.getText(),this.txtContact.getText(),this.txtContactPhoneNum.getText(),"","","");
+                    this.txtType.getText(),this.txtContact.getText(),this.txtContactPhoneNum.getText(),"","");
             JOptionPane.showMessageDialog(this,"添加成功！");
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(this,"添加失败！");

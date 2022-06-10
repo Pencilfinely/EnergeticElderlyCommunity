@@ -17,8 +17,7 @@ public interface MemberDao{
     String contact,
     String contactPhone,
     String livingManagerUsername,
-    String livingManagerPassword,
-    String busCode) throws IOException;
+    String livingManagerPassword) throws IOException;
 
     public int add(Member member) throws IOException;
 
