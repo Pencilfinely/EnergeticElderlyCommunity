@@ -14,6 +14,7 @@ import com.eec.dao.impl.UserDaoImpl;
 import com.eec.entity.Bus;
 import com.eec.entity.Member;
 import com.eec.entity.User;
+import com.eec.utils.TimeHelper;
 import com.eec.utils.Tools;
 
 import java.awt.*;
@@ -594,7 +595,7 @@ public class BusManagerPanel extends JPanel {
         }
 
         try {
-            if((Tools.weekHelper().equals(bus.getDate()) || bus.getDate().equals("每天")) && Tools.timeEnough(bus.getEndBookingTime())){
+            if((TimeHelper.weekHelper().equals(bus.getDate()) || bus.getDate().equals("每天")) && TimeHelper.timeEnough(bus.getEndBookingTime())){
                 BookDialog.getInstance(bus).setVisible(true);
                 BookDialog.getInstance(bus).setSize(400,170);
             }else {

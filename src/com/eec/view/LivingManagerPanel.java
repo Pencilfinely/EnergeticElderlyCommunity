@@ -10,6 +10,7 @@ import com.eec.dao.impl.MemberDaoImpl;
 import com.eec.dao.impl.UserDaoImpl;
 import com.eec.entity.Member;
 import com.eec.entity.User;
+import com.eec.utils.TimeHelper;
 import com.eec.utils.Tools;
 
 import java.awt.*;
@@ -66,7 +67,7 @@ public class LivingManagerPanel extends JPanel {
                     vector.add(member.getId());
                     vector.add(member.getName());
                     try {
-                        vector.add(Tools.ageHelper(member.getBirth()));
+                        vector.add(TimeHelper.ageHelper(member.getBirth()));
                     } catch (ParseException e) {
 //                    JOptionPane.showMessageDialog(this,"出生日期设置不正确（年月日组成的连续数字，位数不足用0补齐）");
                         vector.add("出生日期设置错误（年月日组成的连续数字，位数不足用0补齐）");

@@ -11,6 +11,7 @@ import com.eec.dao.impl.MemberDaoImpl;
 import com.eec.dao.impl.UserDaoImpl;
 import com.eec.entity.Member;
 import com.eec.entity.User;
+import com.eec.utils.TimeHelper;
 import com.eec.utils.Tools;
 
 import java.awt.*;
@@ -61,7 +62,7 @@ public class UserManagerPanel extends JPanel {
                     vector.add(user.getName());
                     vector.add(user.getGender());
                     try {
-                        vector.add(Tools.ageHelper(user.getBirth()));
+                        vector.add(TimeHelper.ageHelper(user.getBirth()));
                     } catch (ParseException e) {
                         vector.add("出生日期设置错误（年月日组成的连续数字，位数不足用0补齐）");
                     }
@@ -287,7 +288,7 @@ public class UserManagerPanel extends JPanel {
                         vector.add(user.getName());
                         vector.add(user.getGender());
                         try {
-                            vector.add(Tools.ageHelper(user.getBirth()));
+                            vector.add(TimeHelper.ageHelper(user.getBirth()));
                         } catch (ParseException ex) {
                             vector.add("出生日期设置错误（年月日组成的连续数字，位数不足用0补齐）");
                         }
