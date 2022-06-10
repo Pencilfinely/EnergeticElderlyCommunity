@@ -231,7 +231,7 @@ new FormModel {
 								add( "方向" )
 								add( "运营日期" )
 								add( "运营时段" )
-								add( "发车日期" )
+								add( "发车时间" )
 								add( "截止时间" )
 								add( "预约人数" )
 							}, new java.util.Vector {

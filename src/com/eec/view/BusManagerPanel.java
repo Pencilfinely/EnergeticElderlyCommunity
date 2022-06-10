@@ -883,7 +883,7 @@ public class BusManagerPanel extends JPanel {
                             {null, null, null, null, null, null, null, null, null},
                         },
                         new String[] {
-                            "ID", "\u7ebf\u8def\u4ee3\u7801", "\u7ebf\u8def\u540d\u79f0", "\u65b9\u5411", "\u8fd0\u8425\u65e5\u671f", "\u8fd0\u8425\u65f6\u6bb5", "\u53d1\u8f66\u65e5\u671f", "\u622a\u6b62\u65f6\u95f4", "\u9884\u7ea6\u4eba\u6570"
+                            "ID", "\u7ebf\u8def\u4ee3\u7801", "\u7ebf\u8def\u540d\u79f0", "\u65b9\u5411", "\u8fd0\u8425\u65e5\u671f", "\u8fd0\u8425\u65f6\u6bb5", "\u53d1\u8f66\u65f6\u95f4", "\u622a\u6b62\u65f6\u95f4", "\u9884\u7ea6\u4eba\u6570"
                         }
                     ));
                     table1.addMouseListener(new MouseAdapter() {

@@ -8,9 +8,11 @@ import java.awt.event.*;
 import com.eec.dao.BusDao;
 import com.eec.dao.impl.BusDaoImpl;
 import com.eec.entity.Bus;
+import com.eec.utils.Tools;
 
 import java.awt.*;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.List;
 import javax.swing.*;
 import javax.swing.border.*;
@@ -47,6 +49,13 @@ public class SetEndBookingTimeDialog extends JDialog {
     }
 
     private void ok(ActionEvent e) {
+        try {
+            Tools.timeEnough(this.txtEndBookingTime.getText());
+        } catch (ParseException ex) {
+            JOptionPane.showMessageDialog(this,"格式不正确！");
+            return;
+        }
+
         BusDao busDao = BusDaoImpl.getInstance();
 
         try {
